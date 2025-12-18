@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/hr
+    username: postgres
+    password: 123456
+
+logging:
+  file:
+    name: logs/hr-app.log
+  level:
+    root: warn
+    org.billyz.hrmanagement : info

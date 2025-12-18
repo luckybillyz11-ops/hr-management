@@ -1,0 +1,5 @@
+2025-12-18T15:53:26.433+08:00  INFO 36180 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 36180 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
+2025-12-18T15:53:26.436+08:00  INFO 36180 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
+2025-12-18T15:53:27.594+08:00  INFO 36180 --- [main] org.billyz.hrmanagement.HrApp            : Started HrApp in 1.454 seconds (process running for 1.762)
+2025-12-18T15:53:29.535+08:00  INFO 36180 --- [http-nio-8080-exec-1] o.b.h.service.impl.EmpServiceImpl        : 更新员工信息:empno=9, ename=周子贺, status=在职, job=java工程师, mgr=7369, hiredate=2025-12-18T10:00, sal=20000, comm=800, deptno=10
+2025-12-18T15:53:29.711+08:00  INFO 36180 --- [http-nio-8080-exec-1] o.b.h.service.impl.EmpServiceImpl        : 更新员工【结果】:empno=9, 影响行数=1
