@@ -17,7 +17,7 @@ GET http://localhost:8080/getDeptById/10
 GET http://localhost:8080/selectAllDept
 
 ### 删除员工(id)
-DELETE http://localhost:8080/deleteEmpById/7
+DELETE http://localhost:8080/deleteEmpById/8
 
 ### 删除部门(id)
 DELETE http://localhost:8080/deleteDeptById/2
@@ -37,14 +37,14 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "ename": "周子贺",
+  "ename": "杜家瑞",
   "status": "",
   "job": "实习生",
   "mgr": 1,
   "hiredate": "2025-12-17T00:00:00",
   "sal": 1,
   "comm": 1,
-  "deptno": 10
+  "deptno": 20
 }
 
 ### 更新员工基本信息
@@ -52,13 +52,13 @@ PUT http://localhost:8080/updateEmp
 Content-Type: application/json
 
 {
-  "empno": 9,
-  "ename": "周子贺",
+  "empno": 10,
+  "ename": "杜家瑞",
   "status": "在职",
-  "job": "java工程师",
-  "mgr": 7369,
+  "job": "经理",
+  "mgr": 9,
   "hiredate": "2025-12-18T10:00:00",
   "sal": 20000,
-  "comm": 800,
+  "comm": null,
   "deptno": 10
 }
