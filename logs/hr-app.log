@@ -1,17 +1,15 @@
-2025-12-18T15:53:26.433+08:00  INFO 36180 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 36180 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
-2025-12-18T15:53:26.436+08:00  INFO 36180 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
-2025-12-18T15:53:27.594+08:00  INFO 36180 --- [main] org.billyz.hrmanagement.HrApp            : Started HrApp in 1.454 seconds (process running for 1.762)
-2025-12-18T15:53:29.535+08:00  INFO 36180 --- [http-nio-8080-exec-1] o.b.h.service.impl.EmpServiceImpl        : 更新员工信息:empno=9, ename=周子贺, status=在职, job=java工程师, mgr=7369, hiredate=2025-12-18T10:00, sal=20000, comm=800, deptno=10
-2025-12-18T15:53:29.711+08:00  INFO 36180 --- [http-nio-8080-exec-1] o.b.h.service.impl.EmpServiceImpl        : 更新员工【结果】:empno=9, 影响行数=1
-2025-12-18T16:42:09.113+08:00  INFO 46120 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 46120 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
-2025-12-18T16:42:09.115+08:00  INFO 46120 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
-2025-12-18T16:42:10.616+08:00  INFO 46120 --- [main] org.billyz.hrmanagement.HrApp            : Started HrApp in 1.852 seconds (process running for 2.255)
-2025-12-18T16:43:32.445+08:00  INFO 46120 --- [http-nio-8080-exec-1] o.b.h.service.impl.EmpServiceImpl        : 删除员工【入参】:empno=8
-2025-12-18T16:43:32.600+08:00  INFO 46120 --- [http-nio-8080-exec-1] o.b.h.service.impl.EmpServiceImpl        : 删除员工【结果】:empno=8, 影响行数=1
-2025-12-18T16:43:51.488+08:00  INFO 46120 --- [http-nio-8080-exec-3] o.b.h.service.impl.EmpServiceImpl        : 新增员工【入参】:empno=null, ename=杜家瑞, status=待入职, job=实习生, deptno=0
-2025-12-18T16:43:51.495+08:00  INFO 46120 --- [http-nio-8080-exec-3] o.b.h.service.impl.EmpServiceImpl        : 新增员工【完成】:empno=null, ename=杜家瑞, status=待入职, job=实习生, deptno=0
-2025-12-18T16:44:39.844+08:00  INFO 46120 --- [http-nio-8080-exec-4] o.b.h.service.impl.EmpServiceImpl        : 更新员工信息:empno=10, ename=杜家瑞, status=在职, job=经理, mgr=9, hiredate=2025-12-18T10:00, sal=20000, comm=null, deptno=10
-2025-12-18T16:44:39.848+08:00  INFO 46120 --- [http-nio-8080-exec-4] o.b.h.service.impl.EmpServiceImpl        : 更新员工【结果】:empno=10, 影响行数=1
-2025-12-18T16:55:04.212+08:00  INFO 43160 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 43160 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
-2025-12-18T16:55:04.213+08:00  INFO 43160 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
-2025-12-18T16:55:05.508+08:00  INFO 43160 --- [main] org.billyz.hrmanagement.HrApp            : Started HrApp in 1.571 seconds (process running for 1.878)
+2025-12-20T15:45:02.905+08:00  INFO 45824 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 45824 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
+2025-12-20T15:45:02.908+08:00  INFO 45824 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
+2025-12-20T15:45:04.450+08:00  INFO 45824 --- [main] org.billyz.hrmanagement.HrApp            : Started HrApp in 1.875 seconds (process running for 2.311)
+2025-12-20T15:45:28.748+08:00  INFO 45824 --- [http-nio-8080-exec-2] o.b.h.service.impl.EmpServiceImpl        : 新增员工【入参】:empno=null, ename=c, status=待入职, job=实习生, deptno=0
+2025-12-20T15:45:29.019+08:00  INFO 45824 --- [http-nio-8080-exec-2] o.b.h.service.impl.EmpServiceImpl        : 新增员工【完成】:empno=null, ename=c, status=待入职, job=实习生, deptno=0
+2025-12-20T15:46:26.813+08:00  INFO 45824 --- [http-nio-8080-exec-1] o.b.h.service.impl.EmpServiceImpl        : 删除员工【入参】:empno=12
+2025-12-20T15:46:26.821+08:00  INFO 45824 --- [http-nio-8080-exec-1] o.b.h.service.impl.EmpServiceImpl        : 删除员工【结果】:empno=12, 影响行数=1
+2025-12-20T15:46:30.070+08:00  INFO 45824 --- [http-nio-8080-exec-3] o.b.h.service.impl.EmpServiceImpl        : 删除员工【入参】:empno=12
+2025-12-20T15:46:30.072+08:00  INFO 45824 --- [http-nio-8080-exec-3] o.b.h.service.impl.EmpServiceImpl        : 删除员工【结果】:empno=12, 影响行数=0
+2025-12-20T15:46:50.884+08:00  INFO 45824 --- [http-nio-8080-exec-7] o.b.h.service.impl.EmpServiceImpl        : 删除员工【入参】:empno=12
+2025-12-20T15:46:50.886+08:00  INFO 45824 --- [http-nio-8080-exec-7] o.b.h.service.impl.EmpServiceImpl        : 删除员工【结果】:empno=12, 影响行数=0
+2025-12-20T15:47:23.799+08:00  INFO 45824 --- [http-nio-8080-exec-6] o.b.h.service.impl.EmpServiceImpl        : 更新员工信息:empno=12, ename=杜家瑞, status=在职, job=经理, mgr=9, hiredate=2025-12-18T10:00, sal=20000, comm=200, deptno=10
+2025-12-20T15:47:23.806+08:00  INFO 45824 --- [http-nio-8080-exec-6] o.b.h.service.impl.EmpServiceImpl        : 更新员工【结果】:empno=12, 影响行数=0
+2025-12-20T15:47:29.495+08:00  INFO 45824 --- [http-nio-8080-exec-8] o.b.h.service.impl.EmpServiceImpl        : 更新员工信息:empno=10, ename=杜家瑞, status=在职, job=经理, mgr=9, hiredate=2025-12-18T10:00, sal=20000, comm=200, deptno=10
+2025-12-20T15:47:29.499+08:00  INFO 45824 --- [http-nio-8080-exec-8] o.b.h.service.impl.EmpServiceImpl        : 更新员工【结果】:empno=10, 影响行数=1

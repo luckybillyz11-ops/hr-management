@@ -2,13 +2,12 @@ package org.billyz.hrmanagement.controller;
 
 
 import jakarta.annotation.Resource;
+import org.billyz.hrmanagement.common.ApiResponse;
 import org.billyz.hrmanagement.entity.Employee;
 import org.billyz.hrmanagement.service.EmpService;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 public class EmyController {
@@ -17,16 +16,30 @@ public class EmyController {
     private EmpService empService;
 
     @GetMapping("/getEmpById/{empno}")
-    public Employee getEmployee(@PathVariable Integer empno) {
-        return empService.getEmpById(empno);
+    public ApiResponse<Employee> getEmployee(@PathVariable Integer empno) {
+        Employee emp = empService.getEmpById(empno);
+        if (emp == null) {
+            return ApiResponse.fail("员工不存在");
+
+        }
+        return ApiResponse.success(emp);
     }
     @GetMapping("/selectAllEmp")
-    public List<Employee> selectAll() {
-        return empService.getAllEmps();
+    public ApiResponse<List<Employee>> selectAll() {
+        List<Employee> emp = empService.getAllEmps();
+        if (emp == null) {
+            return ApiResponse.fail("查找失败");
+        }
+        return ApiResponse.success(emp);
     }
     @GetMapping("/getEmpByName")
-    public Employee getEmpByName(@RequestParam String ename) {
-        return empService.getEmpByName(ename);
+    public ApiResponse<Employee> getEmpByName(@RequestParam String ename) {
+        Employee emp = empService.getEmpByName(ename);
+        if (emp == null) {
+            return ApiResponse.fail("员工不存在");
+
+        }
+        return ApiResponse.success(emp);
     }
 
     @PostMapping("/addEmp")
@@ -34,19 +47,13 @@ public class EmyController {
         return empService.addEmp(employee);
     }
     @DeleteMapping("/deleteEmpById/{empno}")
-    public Map<String, Object> deleteEmpById(@PathVariable Integer empno) {
+    public ApiResponse<Void> deleteEmpById(@PathVariable Integer empno) {
         int result = empService.deleteEmpById(empno);
-        Map<String, Object> response = new HashMap<>();
         if (result > 0) {
-            response.put("success", true);
-            response.put("message", "删除成功");
-            response.put("deletedCount", result);
+            return ApiResponse.success(null);  // 删除成功，没有数据返回
         } else {
-            response.put("success", false);
-            response.put("message", "删除失败，员工不存在");
-            response.put("deletedCount", 0);
+            return ApiResponse.fail("删除失败，员工不存在");
         }
-        return response;
     }
 //    @PutMapping("/updateEmpDept/{empno}/{deptno}")
 //    public Map<String, Object> updateEmpDept(@PathVariable Integer empno, @PathVariable Integer deptno) {
@@ -65,19 +72,13 @@ public class EmyController {
 //    }
 
     @PutMapping("/updateEmp")
-    public Map<String, Object> updateEmpBasic(@RequestBody Employee employee) {
+    public ApiResponse<Void> updateEmpBasic(@RequestBody Employee employee) {
         int result = empService.updateEmp(employee);
-        Map<String, Object> response = new HashMap<>();
         if (result > 0) {
-            response.put("success", true);
-            response.put("message", "更新成功");
-            response.put("updatedCount", result);
+            return ApiResponse.success(null);
         } else {
-            response.put("success", false);
-            response.put("message", "更新失败，员工不存在");
-            response.put("updatedCount", 0);
+            return ApiResponse.fail("更新失败，员工不存在");
         }
-        return response;
     }
     
 }
