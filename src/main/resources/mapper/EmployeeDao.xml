@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.billyz.hrmanagement.dao.EmployeeDao">
+
+    <!-- EmployeeDetailVO 结果映射 -->
+    <resultMap id="EmployeeDetailVOMap" type="EmployeeDetailVO">
+        <id column="empno" property="empno"/>
+        <result column="ename" property="ename"/>
+        <result column="dname" property="dname"/>
+        <result column="totalIncome" property="totalIncome"/>
+        <result column="salaryGrade" property="salaryGrade"/>
+        <result column="phone" property="phone"/>
+        <result column="email" property="email"/>
+        <collection property="subordinates" column="empno" select="selectSubordinates"/>
+    </resultMap>
+    
+    <!-- 查询下级员工的子查询 -->
+    <select id="selectSubordinates" resultType="java.lang.String">
+        SELECT ename 
+        FROM emp 
+        WHERE mgr = #{empno} AND is_deleted = false 
+        ORDER BY ename
+    </select>
+
+    <!-- 分页查询员工详细信息 -->
+    <select id="queryEmployeeDetailsPage" resultMap="EmployeeDetailVOMap">
+        SELECT
+            e.empno,
+            e.ename,
+            d.dname,
+            (COALESCE(e.sal, 0) + COALESCE(e.comm, 0)) AS totalIncome,
+            s.grade AS salaryGrade,
+            ep.phone,
+            ep.email
+        FROM emp e
+                 LEFT JOIN dept d ON e.deptno = d.deptno
+                 LEFT JOIN salgrade s ON (COALESCE(e.sal, 0) + COALESCE(e.comm, 0)) BETWEEN s.losal AND s.hisal
+                 LEFT JOIN employee_profile ep ON e.empno = ep.employee_id AND ep.is_deleted = false
+        WHERE e.is_deleted = false
+        ORDER BY e.empno
+    </select>
+
+    <!-- EmployeeByDeptVO 结果映射 -->
+    <resultMap id="EmployeeByDeptVOMap" type="EmployeeByDeptVO">
+        <id column="empno" property="empno"/>
+        <result column="ename" property="ename"/>
+        <result column="job" property="job"/>
+        <result column="hiredate" property="hiredate"/>
+        <result column="phone" property="phone"/>
+        <result column="email" property="email"/>
+        <result column="managerName" property="managerName"/>
+    </resultMap>
+
+    <!-- 按部门查询员工信息 -->
+    <select id="queryEmployeesByDeptno" resultMap="EmployeeByDeptVOMap">
+        SELECT
+            e.empno,
+            e.ename,
+            e.job,
+            e.hiredate,
+            ep.phone,
+            ep.email,
+            m.ename AS managerName
+        FROM emp e
+                 LEFT JOIN employee_profile ep ON e.empno = ep.employee_id AND ep.is_deleted = false
+                 LEFT JOIN emp m ON e.mgr = m.empno AND m.is_deleted = false
+        WHERE e.deptno = #{deptno} AND e.is_deleted = false
+        ORDER BY e.empno
+    </select>
+
+</mapper>
+

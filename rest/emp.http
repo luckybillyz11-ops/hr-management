@@ -1,0 +1,41 @@
+### 查询
+GET http://localhost:8080/employees
+
+### 查询（带参数）
+GET http://localhost:8080/employees?empno=7369
+### 模糊查询
+GET http://localhost:8080/employees?ename=张
+### 新增
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+  "ename": "苏六",
+  "status": "在职",
+  "job": "项目经理",
+  "mgr": 7839,
+  "hiredate": "2024-01-15T09:00:00",
+  "sal": 18000.00,
+  "comm": 3000.00,
+  "deptno": 20
+}
+### 入职
+PUT http://localhost:8080/employees
+Content-Type: application/json
+
+{
+    "empno": 1,
+    "deptno": 30 ,
+    "status": "在职"
+}
+
+### 删除
+
+DELETE http://localhost:8080/employees?empno=8010
+
+### 分页
+GET http://localhost:8080/employees/details?current=1&size=3
+
+### 按部门查询员工信息
+GET http://localhost:8080/employees/by-dept?deptno=10
+

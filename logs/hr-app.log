@@ -1,15 +1,482 @@
-2025-12-20T15:45:02.905+08:00  INFO 45824 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 45824 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
-2025-12-20T15:45:02.908+08:00  INFO 45824 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
-2025-12-20T15:45:04.450+08:00  INFO 45824 --- [main] org.billyz.hrmanagement.HrApp            : Started HrApp in 1.875 seconds (process running for 2.311)
-2025-12-20T15:45:28.748+08:00  INFO 45824 --- [http-nio-8080-exec-2] o.b.h.service.impl.EmpServiceImpl        : 新增员工【入参】:empno=null, ename=c, status=待入职, job=实习生, deptno=0
-2025-12-20T15:45:29.019+08:00  INFO 45824 --- [http-nio-8080-exec-2] o.b.h.service.impl.EmpServiceImpl        : 新增员工【完成】:empno=null, ename=c, status=待入职, job=实习生, deptno=0
-2025-12-20T15:46:26.813+08:00  INFO 45824 --- [http-nio-8080-exec-1] o.b.h.service.impl.EmpServiceImpl        : 删除员工【入参】:empno=12
-2025-12-20T15:46:26.821+08:00  INFO 45824 --- [http-nio-8080-exec-1] o.b.h.service.impl.EmpServiceImpl        : 删除员工【结果】:empno=12, 影响行数=1
-2025-12-20T15:46:30.070+08:00  INFO 45824 --- [http-nio-8080-exec-3] o.b.h.service.impl.EmpServiceImpl        : 删除员工【入参】:empno=12
-2025-12-20T15:46:30.072+08:00  INFO 45824 --- [http-nio-8080-exec-3] o.b.h.service.impl.EmpServiceImpl        : 删除员工【结果】:empno=12, 影响行数=0
-2025-12-20T15:46:50.884+08:00  INFO 45824 --- [http-nio-8080-exec-7] o.b.h.service.impl.EmpServiceImpl        : 删除员工【入参】:empno=12
-2025-12-20T15:46:50.886+08:00  INFO 45824 --- [http-nio-8080-exec-7] o.b.h.service.impl.EmpServiceImpl        : 删除员工【结果】:empno=12, 影响行数=0
-2025-12-20T15:47:23.799+08:00  INFO 45824 --- [http-nio-8080-exec-6] o.b.h.service.impl.EmpServiceImpl        : 更新员工信息:empno=12, ename=杜家瑞, status=在职, job=经理, mgr=9, hiredate=2025-12-18T10:00, sal=20000, comm=200, deptno=10
-2025-12-20T15:47:23.806+08:00  INFO 45824 --- [http-nio-8080-exec-6] o.b.h.service.impl.EmpServiceImpl        : 更新员工【结果】:empno=12, 影响行数=0
-2025-12-20T15:47:29.495+08:00  INFO 45824 --- [http-nio-8080-exec-8] o.b.h.service.impl.EmpServiceImpl        : 更新员工信息:empno=10, ename=杜家瑞, status=在职, job=经理, mgr=9, hiredate=2025-12-18T10:00, sal=20000, comm=200, deptno=10
-2025-12-20T15:47:29.499+08:00  INFO 45824 --- [http-nio-8080-exec-8] o.b.h.service.impl.EmpServiceImpl        : 更新员工【结果】:empno=10, 影响行数=1
+2026-01-02T10:51:52.778+08:00  INFO 106824 --- [main] o.b.h.controller.EmpControllerTest       : Starting EmpControllerTest using Java 17.0.14 with PID 106824 (started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T10:51:52.781+08:00  INFO 106824 --- [main] o.b.h.controller.EmpControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T10:51:54.868+08:00  INFO 106824 --- [main] o.b.h.controller.EmpControllerTest       : Started EmpControllerTest in 2.507 seconds (process running for 3.48)
+2026-01-02T10:51:55.985+08:00  INFO 106824 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: , URL: http://localhost/employees,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryByIdOrName,参数: [null, null]
+2026-01-02T10:51:56.117+08:00  INFO 106824 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [Employee(empno=7499, ename=马化腾, status=在职, job=销售员, mgr=7698, hiredate=1981-02-20T00:00, sal=1600.00, comm=300.00, deptno=30, isDeleted=false), Employee(empno=7521, ename=李彦宏, status=在职, job=销售员, mgr=7698, hiredate=1981-02-22T00:00, sal=1250.00, comm=500.00, deptno=30, isDeleted=false), Employee(empno=7566, ename=雷军, status=在职, job=经理, mgr=7839, hiredate=1981-04-02T00:00, sal=2975.00, comm=null, deptno=20, isDeleted=false), Employee(empno=7654, ename=丁磊, status=在职, job=销售员, mgr=7698, hiredate=1981-09-28T00:00, sal=1250.00, comm=1400.00, deptno=30, isDeleted=false), Employee(empno=7698, ename=张一鸣, status=在职, job=经理, mgr=7839, hiredate=1981-05-01T00:00, sal=2850.00, comm=null, deptno=30, isDeleted=false), Employee(empno=7782, ename=王兴, status=在职, job=经理, mgr=7839, hiredate=1981-06-09T00:00, sal=2450.00, comm=null, deptno=10, isDeleted=false), Employee(empno=7788, ename=刘强东, status=在职, job=分析师, mgr=7566, hiredate=1987-04-19T00:00, sal=3000.00, comm=null, deptno=20, isDeleted=false), Employee(empno=7839, ename=任正非, status=在职, job=总裁, mgr=null, hiredate=1981-11-17T00:00, sal=5000.00, comm=null, deptno=10, isDeleted=false), Employee(empno=7844, ename=黄峥, status=在职, job=销售员, mgr=7698, hiredate=1981-09-08T00:00, sal=1500.00, comm=0.00, deptno=30, isDeleted=false), Employee(empno=7876, ename=程维, status=在职, job=职员, mgr=7788, hiredate=1987-05-23T00:00, sal=1100.00, comm=null, deptno=20, isDeleted=false), Employee(empno=7900, ename=沈南鹏, status=在职, job=职员, mgr=7698, hiredate=1981-12-03T00:00, sal=950.00, comm=null, deptno=30, isDeleted=false), Employee(empno=7902, ename=周鸿祎, status=在职, job=分析师, mgr=7566, hiredate=1981-12-03T00:00, sal=3000.00, comm=null, deptno=20, isDeleted=false), Employee(empno=7934, ename=张小龙, status=在职, job=职员, mgr=7782, hiredate=1982-01-23T00:00, sal=1300.00, comm=null, deptno=10, isDeleted=false), Employee(empno=8001, ename=孙正义, status=在职, job=实习生, mgr=7839, hiredate=2023-01-10T00:00, sal=3000.00, comm=null, deptno=50, isDeleted=false), Employee(empno=8002, ename=柳传志, status=在职, job=工程师, mgr=7566, hiredate=2022-05-15T00:00, sal=7500.00, comm=800.00, deptno=99, isDeleted=false), Employee(empno=8003, ename=杨元庆, status=在职, job=顾问, mgr=7839, hiredate=2024-03-01T00:00, sal=9000.00, comm=null, deptno=null, isDeleted=false), Employee(empno=8004, ename=董明珠, status=在职, job=培训师, mgr=9999, hiredate=2020-11-11T00:00, sal=5500.00, comm=null, deptno=10, isDeleted=false), Employee(empno=8005, ename=宗庆后, status=在职, job=职员, mgr=0, hiredate=2021-07-20T00:00, sal=850.00, comm=null, deptno=40, isDeleted=false), Employee(empno=8006, ename=李开复, status=待入职, job=助理, mgr=0, hiredate=2024-01-15T00:00, sal=4500.00, comm=null, deptno=0, isDeleted=false), Employee(empno=8007, ename=俞敏洪, status=在职, job=咨询顾问, mgr=7839, hiredate=2023-08-20T00:00, sal=6000.00, comm=null, deptno=null, isDeleted=false), Employee(empno=8008, ename=章四, status=在职, job=实习生, mgr=0, hiredate=2024-03-01T00:00, sal=2500.00, comm=null, deptno=20, isDeleted=false), Employee(empno=8009, ename=鲁五, status=在职, job=分析师, mgr=7566, hiredate=2023-11-10T00:00, sal=3500.00, comm=200.00, deptno=50, isDeleted=false), Employee(empno=8010, ename=韦六, status=暂停, job=职员, mgr=7782, hiredate=2020-05-15T00:00, sal=1200.00, comm=null, deptno=10, isDeleted=false), Employee(empno=7369, ename=马云云, status=在职, job=软件工程师, mgr=7839, hiredate=2024-01-15T09:00, sal=9000.00, comm=500.00, deptno=10, isDeleted=false)]
+2026-01-02T10:52:22.640+08:00  INFO 99704 --- [main] o.b.h.controller.EmpControllerTest       : Starting EmpControllerTest using Java 17.0.14 with PID 99704 (started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T10:52:22.642+08:00  INFO 99704 --- [main] o.b.h.controller.EmpControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T10:52:24.374+08:00  INFO 99704 --- [main] o.b.h.controller.EmpControllerTest       : Started EmpControllerTest in 2.009 seconds (process running for 2.763)
+2026-01-02T10:52:25.210+08:00  INFO 99704 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: , URL: http://localhost/employees/details,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeeDetailsPage,参数: [2, 5]
+2026-01-02T10:52:25.360+08:00  INFO 99704 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : com.baomidou.mybatisplus.extension.plugins.pagination.Page@4fc71437
+2026-01-02T10:52:25.455+08:00  INFO 99704 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: , URL: http://localhost/employees,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryByIdOrName,参数: [7839, null]
+2026-01-02T10:52:25.459+08:00  INFO 99704 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [Employee(empno=7839, ename=任正非, status=在职, job=总裁, mgr=null, hiredate=1981-11-17T00:00, sal=5000.00, comm=null, deptno=10, isDeleted=false)]
+2026-01-02T10:52:25.472+08:00  INFO 99704 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: , URL: http://localhost/employees/details,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeeDetailsPage,参数: [1, 10]
+2026-01-02T10:52:25.496+08:00  INFO 99704 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : com.baomidou.mybatisplus.extension.plugins.pagination.Page@2e7e84f8
+2026-01-02T10:52:25.505+08:00  INFO 99704 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: , URL: http://localhost/employees/details,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeeDetailsPage,参数: [1, 10]
+2026-01-02T10:52:25.529+08:00  INFO 99704 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : com.baomidou.mybatisplus.extension.plugins.pagination.Page@1bf52f10
+2026-01-02T10:52:25.540+08:00  INFO 99704 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: , URL: http://localhost/employees,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryByIdOrName,参数: [null, 张]
+2026-01-02T10:52:25.544+08:00  INFO 99704 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [Employee(empno=7698, ename=张一鸣, status=在职, job=经理, mgr=7839, hiredate=1981-05-01T00:00, sal=2850.00, comm=null, deptno=30, isDeleted=false), Employee(empno=7934, ename=张小龙, status=在职, job=职员, mgr=7782, hiredate=1982-01-23T00:00, sal=1300.00, comm=null, deptno=10, isDeleted=false)]
+2026-01-02T10:52:25.551+08:00  INFO 99704 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: , URL: http://localhost/employees,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryByIdOrName,参数: [7839, null]
+2026-01-02T10:52:25.553+08:00  INFO 99704 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [Employee(empno=7839, ename=任正非, status=在职, job=总裁, mgr=null, hiredate=1981-11-17T00:00, sal=5000.00, comm=null, deptno=10, isDeleted=false)]
+2026-01-02T10:52:25.620+08:00  INFO 99704 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: , URL: http://localhost/employees,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryByIdOrName,参数: [null, null]
+2026-01-02T10:52:25.624+08:00  INFO 99704 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [Employee(empno=7499, ename=马化腾, status=在职, job=销售员, mgr=7698, hiredate=1981-02-20T00:00, sal=1600.00, comm=300.00, deptno=30, isDeleted=false), Employee(empno=7521, ename=李彦宏, status=在职, job=销售员, mgr=7698, hiredate=1981-02-22T00:00, sal=1250.00, comm=500.00, deptno=30, isDeleted=false), Employee(empno=7566, ename=雷军, status=在职, job=经理, mgr=7839, hiredate=1981-04-02T00:00, sal=2975.00, comm=null, deptno=20, isDeleted=false), Employee(empno=7654, ename=丁磊, status=在职, job=销售员, mgr=7698, hiredate=1981-09-28T00:00, sal=1250.00, comm=1400.00, deptno=30, isDeleted=false), Employee(empno=7698, ename=张一鸣, status=在职, job=经理, mgr=7839, hiredate=1981-05-01T00:00, sal=2850.00, comm=null, deptno=30, isDeleted=false), Employee(empno=7782, ename=王兴, status=在职, job=经理, mgr=7839, hiredate=1981-06-09T00:00, sal=2450.00, comm=null, deptno=10, isDeleted=false), Employee(empno=7788, ename=刘强东, status=在职, job=分析师, mgr=7566, hiredate=1987-04-19T00:00, sal=3000.00, comm=null, deptno=20, isDeleted=false), Employee(empno=7839, ename=任正非, status=在职, job=总裁, mgr=null, hiredate=1981-11-17T00:00, sal=5000.00, comm=null, deptno=10, isDeleted=false), Employee(empno=7844, ename=黄峥, status=在职, job=销售员, mgr=7698, hiredate=1981-09-08T00:00, sal=1500.00, comm=0.00, deptno=30, isDeleted=false), Employee(empno=7876, ename=程维, status=在职, job=职员, mgr=7788, hiredate=1987-05-23T00:00, sal=1100.00, comm=null, deptno=20, isDeleted=false), Employee(empno=7900, ename=沈南鹏, status=在职, job=职员, mgr=7698, hiredate=1981-12-03T00:00, sal=950.00, comm=null, deptno=30, isDeleted=false), Employee(empno=7902, ename=周鸿祎, status=在职, job=分析师, mgr=7566, hiredate=1981-12-03T00:00, sal=3000.00, comm=null, deptno=20, isDeleted=false), Employee(empno=7934, ename=张小龙, status=在职, job=职员, mgr=7782, hiredate=1982-01-23T00:00, sal=1300.00, comm=null, deptno=10, isDeleted=false), Employee(empno=8001, ename=孙正义, status=在职, job=实习生, mgr=7839, hiredate=2023-01-10T00:00, sal=3000.00, comm=null, deptno=50, isDeleted=false), Employee(empno=8002, ename=柳传志, status=在职, job=工程师, mgr=7566, hiredate=2022-05-15T00:00, sal=7500.00, comm=800.00, deptno=99, isDeleted=false), Employee(empno=8003, ename=杨元庆, status=在职, job=顾问, mgr=7839, hiredate=2024-03-01T00:00, sal=9000.00, comm=null, deptno=null, isDeleted=false), Employee(empno=8004, ename=董明珠, status=在职, job=培训师, mgr=9999, hiredate=2020-11-11T00:00, sal=5500.00, comm=null, deptno=10, isDeleted=false), Employee(empno=8005, ename=宗庆后, status=在职, job=职员, mgr=0, hiredate=2021-07-20T00:00, sal=850.00, comm=null, deptno=40, isDeleted=false), Employee(empno=8006, ename=李开复, status=待入职, job=助理, mgr=0, hiredate=2024-01-15T00:00, sal=4500.00, comm=null, deptno=0, isDeleted=false), Employee(empno=8007, ename=俞敏洪, status=在职, job=咨询顾问, mgr=7839, hiredate=2023-08-20T00:00, sal=6000.00, comm=null, deptno=null, isDeleted=false), Employee(empno=8008, ename=章四, status=在职, job=实习生, mgr=0, hiredate=2024-03-01T00:00, sal=2500.00, comm=null, deptno=20, isDeleted=false), Employee(empno=8009, ename=鲁五, status=在职, job=分析师, mgr=7566, hiredate=2023-11-10T00:00, sal=3500.00, comm=200.00, deptno=50, isDeleted=false), Employee(empno=8010, ename=韦六, status=暂停, job=职员, mgr=7782, hiredate=2020-05-15T00:00, sal=1200.00, comm=null, deptno=10, isDeleted=false), Employee(empno=7369, ename=马云云, status=在职, job=软件工程师, mgr=7839, hiredate=2024-01-15T09:00, sal=9000.00, comm=500.00, deptno=10, isDeleted=false)]
+2026-01-02T11:05:51.737+08:00  INFO 95480 --- [main] o.b.hrmanagement.service.EmpServiceTest  : Starting EmpServiceTest using Java 17.0.14 with PID 95480 (started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T11:05:51.738+08:00  INFO 95480 --- [main] o.b.hrmanagement.service.EmpServiceTest  : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T11:05:53.644+08:00  INFO 95480 --- [main] o.b.hrmanagement.service.EmpServiceTest  : Started EmpServiceTest in 2.184 seconds (process running for 2.946)
+2026-01-02T11:05:54.559+08:00  INFO 95480 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: , URL: http://localhost,HTTP方法: , 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeeDetailsPage,参数: [1, 5]
+2026-01-02T11:05:54.694+08:00  INFO 95480 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : com.baomidou.mybatisplus.extension.plugins.pagination.Page@254513e8
+2026-01-02T11:15:36.711+08:00  INFO 108420 --- [main] o.b.h.controller.EmpControllerTest       : Starting EmpControllerTest using Java 17.0.14 with PID 108420 (started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T11:15:36.712+08:00  INFO 108420 --- [main] o.b.h.controller.EmpControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T11:15:38.644+08:00  INFO 108420 --- [main] o.b.h.controller.EmpControllerTest       : Started EmpControllerTest in 2.207 seconds (process running for 2.988)
+2026-01-02T11:15:39.325+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: , URL: http://localhost/employees/details,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeeDetailsPage,参数: [2, 5]
+2026-01-02T11:15:39.462+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : com.baomidou.mybatisplus.extension.plugins.pagination.Page@2337bf27
+2026-01-02T11:15:39.571+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 按员工编号或姓名查询员工信息, URL: http://localhost/employees,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryByIdOrName,参数: [7839, null]
+2026-01-02T11:15:39.576+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [Employee(empno=7839, ename=任正非, status=在职, job=总裁, mgr=null, hiredate=1981-11-17T00:00, sal=5000.00, comm=null, deptno=10, isDeleted=false)]
+2026-01-02T11:15:39.594+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: , URL: http://localhost/employees/details,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeeDetailsPage,参数: [1, 10]
+2026-01-02T11:15:39.628+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : com.baomidou.mybatisplus.extension.plugins.pagination.Page@280099a0
+2026-01-02T11:15:39.640+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: , URL: http://localhost/employees/details,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeeDetailsPage,参数: [1, 10]
+2026-01-02T11:15:39.662+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : com.baomidou.mybatisplus.extension.plugins.pagination.Page@55a66bbf
+2026-01-02T11:15:39.672+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 按部门查询员工信息, URL: http://localhost/employees/by-dept,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeesByDeptno,参数: [10]
+2026-01-02T11:15:39.675+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [EmployeeByDeptVO(empno=7369, ename=马云云, job=软件工程师, hiredate=2024-01-15T09:00, phone=null, email=null, managerName=任正非), EmployeeByDeptVO(empno=7782, ename=王兴, job=经理, hiredate=1981-06-09T00:00, phone=null, email=null, managerName=任正非), EmployeeByDeptVO(empno=7839, ename=任正非, job=总裁, hiredate=1981-11-17T00:00, phone=null, email=null, managerName=null), EmployeeByDeptVO(empno=7934, ename=张小龙, job=职员, hiredate=1982-01-23T00:00, phone=null, email=null, managerName=王兴), EmployeeByDeptVO(empno=8004, ename=董明珠, job=培训师, hiredate=2020-11-11T00:00, phone=null, email=null, managerName=null), EmployeeByDeptVO(empno=8010, ename=韦六, job=职员, hiredate=2020-05-15T00:00, phone=null, email=null, managerName=王兴)]
+2026-01-02T11:15:39.689+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 按部门查询员工信息, URL: http://localhost/employees/by-dept,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeesByDeptno,参数: [20]
+2026-01-02T11:15:39.691+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [EmployeeByDeptVO(empno=7566, ename=雷军, job=经理, hiredate=1981-04-02T00:00, phone=null, email=null, managerName=任正非), EmployeeByDeptVO(empno=7788, ename=刘强东, job=分析师, hiredate=1987-04-19T00:00, phone=null, email=null, managerName=雷军), EmployeeByDeptVO(empno=7876, ename=程维, job=职员, hiredate=1987-05-23T00:00, phone=null, email=null, managerName=刘强东), EmployeeByDeptVO(empno=7902, ename=周鸿祎, job=分析师, hiredate=1981-12-03T00:00, phone=null, email=null, managerName=雷军), EmployeeByDeptVO(empno=8008, ename=章四, job=实习生, hiredate=2024-03-01T00:00, phone=null, email=null, managerName=null)]
+2026-01-02T11:15:39.701+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 按部门查询员工信息, URL: http://localhost/employees/by-dept,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeesByDeptno,参数: [30]
+2026-01-02T11:15:39.704+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [EmployeeByDeptVO(empno=7499, ename=马化腾, job=销售员, hiredate=1981-02-20T00:00, phone=null, email=null, managerName=张一鸣), EmployeeByDeptVO(empno=7521, ename=李彦宏, job=销售员, hiredate=1981-02-22T00:00, phone=null, email=null, managerName=张一鸣), EmployeeByDeptVO(empno=7654, ename=丁磊, job=销售员, hiredate=1981-09-28T00:00, phone=null, email=null, managerName=张一鸣), EmployeeByDeptVO(empno=7698, ename=张一鸣, job=经理, hiredate=1981-05-01T00:00, phone=null, email=null, managerName=任正非), EmployeeByDeptVO(empno=7844, ename=黄峥, job=销售员, hiredate=1981-09-08T00:00, phone=null, email=null, managerName=张一鸣), EmployeeByDeptVO(empno=7900, ename=沈南鹏, job=职员, hiredate=1981-12-03T00:00, phone=null, email=null, managerName=张一鸣)]
+2026-01-02T11:15:39.715+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 按员工编号或姓名查询员工信息, URL: http://localhost/employees,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryByIdOrName,参数: [null, 张]
+2026-01-02T11:15:39.720+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [Employee(empno=7698, ename=张一鸣, status=在职, job=经理, mgr=7839, hiredate=1981-05-01T00:00, sal=2850.00, comm=null, deptno=30, isDeleted=false), Employee(empno=7934, ename=张小龙, status=在职, job=职员, mgr=7782, hiredate=1982-01-23T00:00, sal=1300.00, comm=null, deptno=10, isDeleted=false)]
+2026-01-02T11:15:39.728+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 按部门查询员工信息, URL: http://localhost/employees/by-dept,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeesByDeptno,参数: [999]
+2026-01-02T11:15:39.730+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : []
+2026-01-02T11:15:39.738+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 按员工编号或姓名查询员工信息, URL: http://localhost/employees,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryByIdOrName,参数: [7839, null]
+2026-01-02T11:15:39.740+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [Employee(empno=7839, ename=任正非, status=在职, job=总裁, mgr=null, hiredate=1981-11-17T00:00, sal=5000.00, comm=null, deptno=10, isDeleted=false)]
+2026-01-02T11:15:39.793+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 更新员工信息, URL: http://localhost/employees,HTTP方法: PUT, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.updateEmp,参数: [Employee(empno=7839, ename=任正非_测试更新, status=在职, job=总裁, mgr=null, hiredate=1981-11-17T00:00, sal=5000.00, comm=null, deptno=10, isDeleted=false)]
+2026-01-02T11:15:39.799+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : 1
+2026-01-02T11:15:39.807+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 按员工编号或姓名查询员工信息, URL: http://localhost/employees,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryByIdOrName,参数: [null, null]
+2026-01-02T11:15:39.811+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [Employee(empno=7499, ename=马化腾, status=在职, job=销售员, mgr=7698, hiredate=1981-02-20T00:00, sal=1600.00, comm=300.00, deptno=30, isDeleted=false), Employee(empno=7521, ename=李彦宏, status=在职, job=销售员, mgr=7698, hiredate=1981-02-22T00:00, sal=1250.00, comm=500.00, deptno=30, isDeleted=false), Employee(empno=7566, ename=雷军, status=在职, job=经理, mgr=7839, hiredate=1981-04-02T00:00, sal=2975.00, comm=null, deptno=20, isDeleted=false), Employee(empno=7654, ename=丁磊, status=在职, job=销售员, mgr=7698, hiredate=1981-09-28T00:00, sal=1250.00, comm=1400.00, deptno=30, isDeleted=false), Employee(empno=7698, ename=张一鸣, status=在职, job=经理, mgr=7839, hiredate=1981-05-01T00:00, sal=2850.00, comm=null, deptno=30, isDeleted=false), Employee(empno=7782, ename=王兴, status=在职, job=经理, mgr=7839, hiredate=1981-06-09T00:00, sal=2450.00, comm=null, deptno=10, isDeleted=false), Employee(empno=7788, ename=刘强东, status=在职, job=分析师, mgr=7566, hiredate=1987-04-19T00:00, sal=3000.00, comm=null, deptno=20, isDeleted=false), Employee(empno=7839, ename=任正非, status=在职, job=总裁, mgr=null, hiredate=1981-11-17T00:00, sal=5000.00, comm=null, deptno=10, isDeleted=false), Employee(empno=7844, ename=黄峥, status=在职, job=销售员, mgr=7698, hiredate=1981-09-08T00:00, sal=1500.00, comm=0.00, deptno=30, isDeleted=false), Employee(empno=7876, ename=程维, status=在职, job=职员, mgr=7788, hiredate=1987-05-23T00:00, sal=1100.00, comm=null, deptno=20, isDeleted=false), Employee(empno=7900, ename=沈南鹏, status=在职, job=职员, mgr=7698, hiredate=1981-12-03T00:00, sal=950.00, comm=null, deptno=30, isDeleted=false), Employee(empno=7902, ename=周鸿祎, status=在职, job=分析师, mgr=7566, hiredate=1981-12-03T00:00, sal=3000.00, comm=null, deptno=20, isDeleted=false), Employee(empno=7934, ename=张小龙, status=在职, job=职员, mgr=7782, hiredate=1982-01-23T00:00, sal=1300.00, comm=null, deptno=10, isDeleted=false), Employee(empno=8001, ename=孙正义, status=在职, job=实习生, mgr=7839, hiredate=2023-01-10T00:00, sal=3000.00, comm=null, deptno=50, isDeleted=false), Employee(empno=8002, ename=柳传志, status=在职, job=工程师, mgr=7566, hiredate=2022-05-15T00:00, sal=7500.00, comm=800.00, deptno=99, isDeleted=false), Employee(empno=8003, ename=杨元庆, status=在职, job=顾问, mgr=7839, hiredate=2024-03-01T00:00, sal=9000.00, comm=null, deptno=null, isDeleted=false), Employee(empno=8004, ename=董明珠, status=在职, job=培训师, mgr=9999, hiredate=2020-11-11T00:00, sal=5500.00, comm=null, deptno=10, isDeleted=false), Employee(empno=8005, ename=宗庆后, status=在职, job=职员, mgr=0, hiredate=2021-07-20T00:00, sal=850.00, comm=null, deptno=40, isDeleted=false), Employee(empno=8006, ename=李开复, status=待入职, job=助理, mgr=0, hiredate=2024-01-15T00:00, sal=4500.00, comm=null, deptno=0, isDeleted=false), Employee(empno=8007, ename=俞敏洪, status=在职, job=咨询顾问, mgr=7839, hiredate=2023-08-20T00:00, sal=6000.00, comm=null, deptno=null, isDeleted=false), Employee(empno=8008, ename=章四, status=在职, job=实习生, mgr=0, hiredate=2024-03-01T00:00, sal=2500.00, comm=null, deptno=20, isDeleted=false), Employee(empno=8009, ename=鲁五, status=在职, job=分析师, mgr=7566, hiredate=2023-11-10T00:00, sal=3500.00, comm=200.00, deptno=50, isDeleted=false), Employee(empno=8010, ename=韦六, status=暂停, job=职员, mgr=7782, hiredate=2020-05-15T00:00, sal=1200.00, comm=null, deptno=10, isDeleted=false), Employee(empno=7369, ename=马云云, status=在职, job=软件工程师, mgr=7839, hiredate=2024-01-15T09:00, sal=9000.00, comm=500.00, deptno=10, isDeleted=false)]
+2026-01-02T11:15:39.823+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 更新员工信息, URL: http://localhost/employees,HTTP方法: PUT, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.updateEmp,参数: [Employee(empno=99999, ename=不存在的员工, status=null, job=null, mgr=null, hiredate=null, sal=null, comm=null, deptno=null, isDeleted=null)]
+2026-01-02T11:15:39.825+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : 0
+2026-01-02T11:15:39.833+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 按部门查询员工信息, URL: http://localhost/employees/by-dept,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeesByDeptno,参数: [10]
+2026-01-02T11:15:39.835+08:00  INFO 108420 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [EmployeeByDeptVO(empno=7369, ename=马云云, job=软件工程师, hiredate=2024-01-15T09:00, phone=null, email=null, managerName=任正非), EmployeeByDeptVO(empno=7782, ename=王兴, job=经理, hiredate=1981-06-09T00:00, phone=null, email=null, managerName=任正非), EmployeeByDeptVO(empno=7839, ename=任正非, job=总裁, hiredate=1981-11-17T00:00, phone=null, email=null, managerName=null), EmployeeByDeptVO(empno=7934, ename=张小龙, job=职员, hiredate=1982-01-23T00:00, phone=null, email=null, managerName=王兴), EmployeeByDeptVO(empno=8004, ename=董明珠, job=培训师, hiredate=2020-11-11T00:00, phone=null, email=null, managerName=null), EmployeeByDeptVO(empno=8010, ename=韦六, job=职员, hiredate=2020-05-15T00:00, phone=null, email=null, managerName=王兴)]
+2026-01-02T11:25:06.749+08:00  INFO 108192 --- [main] o.b.h.controller.EmpControllerTest       : Starting EmpControllerTest using Java 17.0.14 with PID 108192 (started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T11:25:06.750+08:00  INFO 108192 --- [main] o.b.h.controller.EmpControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T11:25:08.387+08:00  INFO 108192 --- [main] o.b.h.controller.EmpControllerTest       : Started EmpControllerTest in 1.91 seconds (process running for 2.626)
+2026-01-02T11:25:09.077+08:00  INFO 108192 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 按员工编号或姓名查询员工信息, URL: http://localhost/employees,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryByIdOrName,参数: [7839, null]
+2026-01-02T11:25:09.157+08:00  INFO 108192 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [Employee(empno=7839, ename=任正非, status=在职, job=总裁, mgr=null, hiredate=1981-11-17T00:00, sal=5000.00, comm=null, deptno=10, isDeleted=false)]
+2026-01-02T11:25:09.250+08:00  INFO 108192 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: , URL: http://localhost/employees/details,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeeDetailsPage,参数: [1, 10]
+2026-01-02T11:25:09.327+08:00  INFO 108192 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : com.baomidou.mybatisplus.extension.plugins.pagination.Page@3c9971af
+2026-01-02T11:25:09.347+08:00  INFO 108192 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 按员工编号或姓名查询员工信息, URL: http://localhost/employees,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryByIdOrName,参数: [null, 张]
+2026-01-02T11:25:09.351+08:00  INFO 108192 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [Employee(empno=7698, ename=张一鸣, status=在职, job=经理, mgr=7839, hiredate=1981-05-01T00:00, sal=2850.00, comm=null, deptno=30, isDeleted=false), Employee(empno=7934, ename=张小龙, status=在职, job=职员, mgr=7782, hiredate=1982-01-23T00:00, sal=1300.00, comm=null, deptno=10, isDeleted=false)]
+2026-01-02T11:25:09.363+08:00  INFO 108192 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 按部门查询员工信息, URL: http://localhost/employees/by-dept,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeesByDeptno,参数: [999]
+2026-01-02T11:25:09.366+08:00  INFO 108192 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : []
+2026-01-02T11:25:09.377+08:00  INFO 108192 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 按员工编号或姓名查询员工信息, URL: http://localhost/employees,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryByIdOrName,参数: [7839, null]
+2026-01-02T11:25:09.381+08:00  INFO 108192 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [Employee(empno=7839, ename=任正非, status=在职, job=总裁, mgr=null, hiredate=1981-11-17T00:00, sal=5000.00, comm=null, deptno=10, isDeleted=false)]
+2026-01-02T11:25:09.424+08:00  INFO 108192 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 更新员工信息, URL: http://localhost/employees,HTTP方法: PUT, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.updateEmp,参数: [Employee(empno=7839, ename=任正非_测试更新, status=在职, job=总裁, mgr=null, hiredate=1981-11-17T00:00, sal=5000.00, comm=null, deptno=10, isDeleted=false)]
+2026-01-02T11:25:09.432+08:00  INFO 108192 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : 1
+2026-01-02T11:25:09.442+08:00  INFO 108192 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 按员工编号或姓名查询员工信息, URL: http://localhost/employees,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryByIdOrName,参数: [null, null]
+2026-01-02T11:25:09.447+08:00  INFO 108192 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [Employee(empno=7499, ename=马化腾, status=在职, job=销售员, mgr=7698, hiredate=1981-02-20T00:00, sal=1600.00, comm=300.00, deptno=30, isDeleted=false), Employee(empno=7521, ename=李彦宏, status=在职, job=销售员, mgr=7698, hiredate=1981-02-22T00:00, sal=1250.00, comm=500.00, deptno=30, isDeleted=false), Employee(empno=7566, ename=雷军, status=在职, job=经理, mgr=7839, hiredate=1981-04-02T00:00, sal=2975.00, comm=null, deptno=20, isDeleted=false), Employee(empno=7654, ename=丁磊, status=在职, job=销售员, mgr=7698, hiredate=1981-09-28T00:00, sal=1250.00, comm=1400.00, deptno=30, isDeleted=false), Employee(empno=7698, ename=张一鸣, status=在职, job=经理, mgr=7839, hiredate=1981-05-01T00:00, sal=2850.00, comm=null, deptno=30, isDeleted=false), Employee(empno=7782, ename=王兴, status=在职, job=经理, mgr=7839, hiredate=1981-06-09T00:00, sal=2450.00, comm=null, deptno=10, isDeleted=false), Employee(empno=7788, ename=刘强东, status=在职, job=分析师, mgr=7566, hiredate=1987-04-19T00:00, sal=3000.00, comm=null, deptno=20, isDeleted=false), Employee(empno=7839, ename=任正非, status=在职, job=总裁, mgr=null, hiredate=1981-11-17T00:00, sal=5000.00, comm=null, deptno=10, isDeleted=false), Employee(empno=7844, ename=黄峥, status=在职, job=销售员, mgr=7698, hiredate=1981-09-08T00:00, sal=1500.00, comm=0.00, deptno=30, isDeleted=false), Employee(empno=7876, ename=程维, status=在职, job=职员, mgr=7788, hiredate=1987-05-23T00:00, sal=1100.00, comm=null, deptno=20, isDeleted=false), Employee(empno=7900, ename=沈南鹏, status=在职, job=职员, mgr=7698, hiredate=1981-12-03T00:00, sal=950.00, comm=null, deptno=30, isDeleted=false), Employee(empno=7902, ename=周鸿祎, status=在职, job=分析师, mgr=7566, hiredate=1981-12-03T00:00, sal=3000.00, comm=null, deptno=20, isDeleted=false), Employee(empno=7934, ename=张小龙, status=在职, job=职员, mgr=7782, hiredate=1982-01-23T00:00, sal=1300.00, comm=null, deptno=10, isDeleted=false), Employee(empno=8001, ename=孙正义, status=在职, job=实习生, mgr=7839, hiredate=2023-01-10T00:00, sal=3000.00, comm=null, deptno=50, isDeleted=false), Employee(empno=8002, ename=柳传志, status=在职, job=工程师, mgr=7566, hiredate=2022-05-15T00:00, sal=7500.00, comm=800.00, deptno=99, isDeleted=false), Employee(empno=8003, ename=杨元庆, status=在职, job=顾问, mgr=7839, hiredate=2024-03-01T00:00, sal=9000.00, comm=null, deptno=null, isDeleted=false), Employee(empno=8004, ename=董明珠, status=在职, job=培训师, mgr=9999, hiredate=2020-11-11T00:00, sal=5500.00, comm=null, deptno=10, isDeleted=false), Employee(empno=8005, ename=宗庆后, status=在职, job=职员, mgr=0, hiredate=2021-07-20T00:00, sal=850.00, comm=null, deptno=40, isDeleted=false), Employee(empno=8006, ename=李开复, status=待入职, job=助理, mgr=0, hiredate=2024-01-15T00:00, sal=4500.00, comm=null, deptno=0, isDeleted=false), Employee(empno=8007, ename=俞敏洪, status=在职, job=咨询顾问, mgr=7839, hiredate=2023-08-20T00:00, sal=6000.00, comm=null, deptno=null, isDeleted=false), Employee(empno=8008, ename=章四, status=在职, job=实习生, mgr=0, hiredate=2024-03-01T00:00, sal=2500.00, comm=null, deptno=20, isDeleted=false), Employee(empno=8009, ename=鲁五, status=在职, job=分析师, mgr=7566, hiredate=2023-11-10T00:00, sal=3500.00, comm=200.00, deptno=50, isDeleted=false), Employee(empno=8010, ename=韦六, status=暂停, job=职员, mgr=7782, hiredate=2020-05-15T00:00, sal=1200.00, comm=null, deptno=10, isDeleted=false), Employee(empno=7369, ename=马云云, status=在职, job=软件工程师, mgr=7839, hiredate=2024-01-15T09:00, sal=9000.00, comm=500.00, deptno=10, isDeleted=false)]
+2026-01-02T11:25:09.460+08:00  INFO 108192 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 更新员工信息, URL: http://localhost/employees,HTTP方法: PUT, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.updateEmp,参数: [Employee(empno=99999, ename=不存在的员工, status=null, job=null, mgr=null, hiredate=null, sal=null, comm=null, deptno=null, isDeleted=null)]
+2026-01-02T11:25:09.463+08:00  INFO 108192 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : 0
+2026-01-02T11:25:09.472+08:00  INFO 108192 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 按部门查询员工信息, URL: http://localhost/employees/by-dept,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeesByDeptno,参数: [10]
+2026-01-02T11:25:09.474+08:00  INFO 108192 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [EmployeeByDeptVO(empno=7369, ename=马云云, job=软件工程师, hiredate=2024-01-15T09:00, phone=null, email=null, managerName=任正非), EmployeeByDeptVO(empno=7782, ename=王兴, job=经理, hiredate=1981-06-09T00:00, phone=null, email=null, managerName=任正非), EmployeeByDeptVO(empno=7839, ename=任正非, job=总裁, hiredate=1981-11-17T00:00, phone=null, email=null, managerName=null), EmployeeByDeptVO(empno=7934, ename=张小龙, job=职员, hiredate=1982-01-23T00:00, phone=null, email=null, managerName=王兴), EmployeeByDeptVO(empno=8004, ename=董明珠, job=培训师, hiredate=2020-11-11T00:00, phone=null, email=null, managerName=null), EmployeeByDeptVO(empno=8010, ename=韦六, job=职员, hiredate=2020-05-15T00:00, phone=null, email=null, managerName=王兴)]
+2026-01-02T11:25:13.662+08:00  INFO 115708 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 115708 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T11:25:13.664+08:00  INFO 115708 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T11:25:15.199+08:00  INFO 115708 --- [main] org.billyz.hrmanagement.HrApp            : Started HrApp in 1.834 seconds (process running for 2.146)
+2026-01-02T11:25:20.192+08:00  INFO 115708 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 按部门查询员工信息, URL: http://localhost:8080/employees/by-dept,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeesByDeptno,参数: [10]
+2026-01-02T11:25:20.340+08:00  INFO 115708 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [EmployeeByDeptVO(empno=7369, ename=马云云, job=软件工程师, hiredate=2024-01-15T09:00, phone=null, email=null, managerName=任正非), EmployeeByDeptVO(empno=7782, ename=王兴, job=经理, hiredate=1981-06-09T00:00, phone=null, email=null, managerName=任正非), EmployeeByDeptVO(empno=7839, ename=任正非, job=总裁, hiredate=1981-11-17T00:00, phone=null, email=null, managerName=null), EmployeeByDeptVO(empno=7934, ename=张小龙, job=职员, hiredate=1982-01-23T00:00, phone=null, email=null, managerName=王兴), EmployeeByDeptVO(empno=8004, ename=董明珠, job=培训师, hiredate=2020-11-11T00:00, phone=null, email=null, managerName=null), EmployeeByDeptVO(empno=8010, ename=韦六, job=职员, hiredate=2020-05-15T00:00, phone=null, email=null, managerName=王兴)]
+2026-01-02T11:37:55.488+08:00  INFO 91008 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 91008 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T11:37:55.490+08:00  INFO 91008 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T11:37:57.053+08:00  INFO 91008 --- [main] org.billyz.hrmanagement.HrApp            : Started HrApp in 1.845 seconds (process running for 2.157)
+2026-01-02T11:37:59.263+08:00  INFO 91008 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 按部门查询员工信息, URL: http://localhost:8080/employees/by-dept,HTTP方法: GET, 类方法：org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeesByDeptno,参数: [20]
+2026-01-02T11:37:59.412+08:00  INFO 91008 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [EmployeeByDeptVO(empno=7566, ename=雷军, job=经理, hiredate=1981-04-02T00:00, phone=13800007566, email=leijun@company.com, managerName=任正非), EmployeeByDeptVO(empno=7788, ename=刘强东, job=分析师, hiredate=1987-04-19T00:00, phone=13800007788, email=liuqiangdong@company.com, managerName=雷军), EmployeeByDeptVO(empno=7876, ename=程维, job=职员, hiredate=1987-05-23T00:00, phone=13800007876, email=chengwei@company.com, managerName=刘强东), EmployeeByDeptVO(empno=7902, ename=周鸿祎, job=分析师, hiredate=1981-12-03T00:00, phone=13800007902, email=zhouhongyi@company.com, managerName=雷军), EmployeeByDeptVO(empno=8008, ename=章四, job=实习生, hiredate=2024-03-01T00:00, phone=13800008008, email=zhangsi@company.com, managerName=null)]
+2026-01-02T11:38:48.751+08:00  INFO 108192 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 108192 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T11:38:48.752+08:00  INFO 108192 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T11:38:50.313+08:00  INFO 108192 --- [main] org.billyz.hrmanagement.HrApp            : Started HrApp in 1.845 seconds (process running for 2.167)
+2026-01-02T11:38:54.693+08:00  INFO 108192 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 按部门查询员工信息
+2026-01-02T11:38:54.695+08:00  INFO 108192 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : URL: http://localhost:8080/employees/by-dept
+2026-01-02T11:38:54.695+08:00  INFO 108192 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : HTTP方法: GET
+2026-01-02T11:38:54.695+08:00  INFO 108192 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : 类方法: org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeesByDeptno
+2026-01-02T11:38:54.695+08:00  INFO 108192 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : 参数: [10]
+2026-01-02T11:38:54.848+08:00  INFO 108192 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [EmployeeByDeptVO(empno=7369, ename=马云云, job=软件工程师, hiredate=2024-01-15T09:00, phone=13800007369, email=mayun@company.com, managerName=任正非), EmployeeByDeptVO(empno=7782, ename=王兴, job=经理, hiredate=1981-06-09T00:00, phone=13800007782, email=wangxing@company.com, managerName=任正非), EmployeeByDeptVO(empno=7839, ename=任正非, job=总裁, hiredate=1981-11-17T00:00, phone=13800007839, email=renzhengfei@company.com, managerName=null), EmployeeByDeptVO(empno=7934, ename=张小龙, job=职员, hiredate=1982-01-23T00:00, phone=13800007934, email=zhangxiaolong@company.com, managerName=王兴), EmployeeByDeptVO(empno=8004, ename=董明珠, job=培训师, hiredate=2020-11-11T00:00, phone=13800008004, email=dongmingzhu@company.com, managerName=null), EmployeeByDeptVO(empno=8010, ename=韦六, job=职员, hiredate=2020-05-15T00:00, phone=13800008010, email=weiliu@company.com, managerName=王兴)]
+2026-01-02T11:39:46.335+08:00  INFO 108192 --- [http-nio-8080-exec-2] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 按部门查询员工信息
+2026-01-02T11:39:46.336+08:00  INFO 108192 --- [http-nio-8080-exec-2] o.billyz.hrmanagement.aspect.LogAspect   : URL: http://localhost:8080/employees/by-dept
+2026-01-02T11:39:46.336+08:00  INFO 108192 --- [http-nio-8080-exec-2] o.billyz.hrmanagement.aspect.LogAspect   : HTTP方法: GET
+2026-01-02T11:39:46.336+08:00  INFO 108192 --- [http-nio-8080-exec-2] o.billyz.hrmanagement.aspect.LogAspect   : 类方法: org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeesByDeptno
+2026-01-02T11:39:46.336+08:00  INFO 108192 --- [http-nio-8080-exec-2] o.billyz.hrmanagement.aspect.LogAspect   : 参数: [30]
+2026-01-02T11:39:46.339+08:00  INFO 108192 --- [http-nio-8080-exec-2] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [EmployeeByDeptVO(empno=7499, ename=马化腾, job=销售员, hiredate=1981-02-20T00:00, phone=13800007499, email=mahuateng@company.com, managerName=张一鸣), EmployeeByDeptVO(empno=7521, ename=李彦宏, job=销售员, hiredate=1981-02-22T00:00, phone=13800007521, email=liyanhong@company.com, managerName=张一鸣), EmployeeByDeptVO(empno=7654, ename=丁磊, job=销售员, hiredate=1981-09-28T00:00, phone=13800007654, email=dinglei@company.com, managerName=张一鸣), EmployeeByDeptVO(empno=7698, ename=张一鸣, job=经理, hiredate=1981-05-01T00:00, phone=13800007698, email=zhangyiming@company.com, managerName=任正非), EmployeeByDeptVO(empno=7844, ename=黄峥, job=销售员, hiredate=1981-09-08T00:00, phone=13800007844, email=huangzheng@company.com, managerName=张一鸣), EmployeeByDeptVO(empno=7900, ename=沈南鹏, job=职员, hiredate=1981-12-03T00:00, phone=13800007900, email=shennanpeng@company.com, managerName=张一鸣)]
+2026-01-02T11:40:52.557+08:00  INFO 104340 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 104340 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T11:40:52.559+08:00  INFO 104340 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T11:40:54.177+08:00  INFO 104340 --- [main] org.billyz.hrmanagement.HrApp            : Started HrApp in 1.928 seconds (process running for 2.234)
+2026-01-02T11:40:55.692+08:00  INFO 104340 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : 操作描述: 按部门查询员工信息
+URL: http://localhost:8080/employees/by-dept
+HTTP方法: GET
+类方法: org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeesByDeptno
+参数: [20]
+
+2026-01-02T11:40:55.855+08:00  INFO 104340 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [EmployeeByDeptVO(empno=7566, ename=雷军, job=经理, hiredate=1981-04-02T00:00, phone=13800007566, email=leijun@company.com, managerName=任正非), EmployeeByDeptVO(empno=7788, ename=刘强东, job=分析师, hiredate=1987-04-19T00:00, phone=13800007788, email=liuqiangdong@company.com, managerName=雷军), EmployeeByDeptVO(empno=7876, ename=程维, job=职员, hiredate=1987-05-23T00:00, phone=13800007876, email=chengwei@company.com, managerName=刘强东), EmployeeByDeptVO(empno=7902, ename=周鸿祎, job=分析师, hiredate=1981-12-03T00:00, phone=13800007902, email=zhouhongyi@company.com, managerName=雷军), EmployeeByDeptVO(empno=8008, ename=章四, job=实习生, hiredate=2024-03-01T00:00, phone=13800008008, email=zhangsi@company.com, managerName=null)]
+2026-01-02T11:41:33.584+08:00  INFO 113368 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 113368 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T11:41:33.585+08:00  INFO 113368 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T11:41:35.299+08:00  INFO 113368 --- [main] org.billyz.hrmanagement.HrApp            : Started HrApp in 2.027 seconds (process running for 2.341)
+2026-01-02T11:41:36.942+08:00  INFO 113368 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : 
+操作描述: 按部门查询员工信息
+URL: http://localhost:8080/employees/by-dept
+HTTP方法: GET
+类方法: org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeesByDeptno
+参数: [10]
+
+2026-01-02T11:41:37.132+08:00  INFO 113368 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [EmployeeByDeptVO(empno=7369, ename=马云云, job=软件工程师, hiredate=2024-01-15T09:00, phone=13800007369, email=mayun@company.com, managerName=任正非), EmployeeByDeptVO(empno=7782, ename=王兴, job=经理, hiredate=1981-06-09T00:00, phone=13800007782, email=wangxing@company.com, managerName=任正非), EmployeeByDeptVO(empno=7839, ename=任正非, job=总裁, hiredate=1981-11-17T00:00, phone=13800007839, email=renzhengfei@company.com, managerName=null), EmployeeByDeptVO(empno=7934, ename=张小龙, job=职员, hiredate=1982-01-23T00:00, phone=13800007934, email=zhangxiaolong@company.com, managerName=王兴), EmployeeByDeptVO(empno=8004, ename=董明珠, job=培训师, hiredate=2020-11-11T00:00, phone=13800008004, email=dongmingzhu@company.com, managerName=null), EmployeeByDeptVO(empno=8010, ename=韦六, job=职员, hiredate=2020-05-15T00:00, phone=13800008010, email=weiliu@company.com, managerName=王兴)]
+2026-01-02T11:48:37.276+08:00  INFO 92972 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 92972 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T11:48:37.278+08:00  INFO 92972 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T11:48:38.849+08:00  INFO 92972 --- [main] org.billyz.hrmanagement.HrApp            : Started HrApp in 1.863 seconds (process running for 2.158)
+2026-01-02T11:48:48.849+08:00  INFO 92972 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : 
+操作描述: 
+URL: http://localhost:8080/employees/details
+HTTP方法: GET
+类方法: org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeeDetailsPage
+参数: [1, 5]
+
+2026-01-02T11:48:49.068+08:00  INFO 92972 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : com.baomidou.mybatisplus.extension.plugins.pagination.Page@5c6a1c0d
+2026-01-02T11:48:54.740+08:00  INFO 92972 --- [http-nio-8080-exec-2] o.billyz.hrmanagement.aspect.LogAspect   : 
+操作描述: 按部门查询员工信息
+URL: http://localhost:8080/employees/by-dept
+HTTP方法: GET
+类方法: org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeesByDeptno
+参数: [20]
+
+2026-01-02T11:48:54.745+08:00  INFO 92972 --- [http-nio-8080-exec-2] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [EmployeeByDeptVO(empno=7566, ename=雷军, job=经理, hiredate=1981-04-02T00:00, phone=13800007566, email=leijun@company.com, managerName=任正非), EmployeeByDeptVO(empno=7788, ename=刘强东, job=分析师, hiredate=1987-04-19T00:00, phone=13800007788, email=liuqiangdong@company.com, managerName=雷军), EmployeeByDeptVO(empno=7876, ename=程维, job=职员, hiredate=1987-05-23T00:00, phone=13800007876, email=chengwei@company.com, managerName=刘强东), EmployeeByDeptVO(empno=7902, ename=周鸿祎, job=分析师, hiredate=1981-12-03T00:00, phone=13800007902, email=zhouhongyi@company.com, managerName=雷军), EmployeeByDeptVO(empno=8008, ename=章四, job=实习生, hiredate=2024-03-01T00:00, phone=13800008008, email=zhangsi@company.com, managerName=null)]
+2026-01-02T12:53:59.020+08:00  INFO 109208 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 109208 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T12:53:59.022+08:00  INFO 109208 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T12:54:00.697+08:00  INFO 109208 --- [main] org.billyz.hrmanagement.HrApp            : Started HrApp in 2.001 seconds (process running for 2.953)
+2026-01-02T12:54:01.184+08:00  INFO 109208 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : 
+操作描述: 按员工编号或姓名查询员工信息
+URL: http://localhost:8080/employees
+HTTP方法: GET
+类方法: org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryByIdOrName
+参数: [null, null]
+
+2026-01-02T12:54:01.598+08:00  INFO 109208 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [Employee(empno=7499, ename=马化腾, status=在职, job=销售员, mgr=7698, hiredate=1981-02-20T00:00, sal=1600.00, comm=300.00, deptno=30, isDeleted=false), Employee(empno=7521, ename=李彦宏, status=在职, job=销售员, mgr=7698, hiredate=1981-02-22T00:00, sal=1250.00, comm=500.00, deptno=30, isDeleted=false), Employee(empno=7566, ename=雷军, status=在职, job=经理, mgr=7839, hiredate=1981-04-02T00:00, sal=2975.00, comm=null, deptno=20, isDeleted=false), Employee(empno=7654, ename=丁磊, status=在职, job=销售员, mgr=7698, hiredate=1981-09-28T00:00, sal=1250.00, comm=1400.00, deptno=30, isDeleted=false), Employee(empno=7698, ename=张一鸣, status=在职, job=经理, mgr=7839, hiredate=1981-05-01T00:00, sal=2850.00, comm=null, deptno=30, isDeleted=false), Employee(empno=7782, ename=王兴, status=在职, job=经理, mgr=7839, hiredate=1981-06-09T00:00, sal=2450.00, comm=null, deptno=10, isDeleted=false), Employee(empno=7788, ename=刘强东, status=在职, job=分析师, mgr=7566, hiredate=1987-04-19T00:00, sal=3000.00, comm=null, deptno=20, isDeleted=false), Employee(empno=7839, ename=任正非, status=在职, job=总裁, mgr=null, hiredate=1981-11-17T00:00, sal=5000.00, comm=null, deptno=10, isDeleted=false), Employee(empno=7844, ename=黄峥, status=在职, job=销售员, mgr=7698, hiredate=1981-09-08T00:00, sal=1500.00, comm=0.00, deptno=30, isDeleted=false), Employee(empno=7876, ename=程维, status=在职, job=职员, mgr=7788, hiredate=1987-05-23T00:00, sal=1100.00, comm=null, deptno=20, isDeleted=false), Employee(empno=7900, ename=沈南鹏, status=在职, job=职员, mgr=7698, hiredate=1981-12-03T00:00, sal=950.00, comm=null, deptno=30, isDeleted=false), Employee(empno=7902, ename=周鸿祎, status=在职, job=分析师, mgr=7566, hiredate=1981-12-03T00:00, sal=3000.00, comm=null, deptno=20, isDeleted=false), Employee(empno=7934, ename=张小龙, status=在职, job=职员, mgr=7782, hiredate=1982-01-23T00:00, sal=1300.00, comm=null, deptno=10, isDeleted=false), Employee(empno=8001, ename=孙正义, status=在职, job=实习生, mgr=7839, hiredate=2023-01-10T00:00, sal=3000.00, comm=null, deptno=50, isDeleted=false), Employee(empno=8002, ename=柳传志, status=在职, job=工程师, mgr=7566, hiredate=2022-05-15T00:00, sal=7500.00, comm=800.00, deptno=99, isDeleted=false), Employee(empno=8003, ename=杨元庆, status=在职, job=顾问, mgr=7839, hiredate=2024-03-01T00:00, sal=9000.00, comm=null, deptno=null, isDeleted=false), Employee(empno=8004, ename=董明珠, status=在职, job=培训师, mgr=9999, hiredate=2020-11-11T00:00, sal=5500.00, comm=null, deptno=10, isDeleted=false), Employee(empno=8005, ename=宗庆后, status=在职, job=职员, mgr=0, hiredate=2021-07-20T00:00, sal=850.00, comm=null, deptno=40, isDeleted=false), Employee(empno=8006, ename=李开复, status=待入职, job=助理, mgr=0, hiredate=2024-01-15T00:00, sal=4500.00, comm=null, deptno=0, isDeleted=false), Employee(empno=8007, ename=俞敏洪, status=在职, job=咨询顾问, mgr=7839, hiredate=2023-08-20T00:00, sal=6000.00, comm=null, deptno=null, isDeleted=false), Employee(empno=8008, ename=章四, status=在职, job=实习生, mgr=0, hiredate=2024-03-01T00:00, sal=2500.00, comm=null, deptno=20, isDeleted=false), Employee(empno=8009, ename=鲁五, status=在职, job=分析师, mgr=7566, hiredate=2023-11-10T00:00, sal=3500.00, comm=200.00, deptno=50, isDeleted=false), Employee(empno=8010, ename=韦六, status=暂停, job=职员, mgr=7782, hiredate=2020-05-15T00:00, sal=1200.00, comm=null, deptno=10, isDeleted=false), Employee(empno=7369, ename=马云云, status=在职, job=软件工程师, mgr=7839, hiredate=2024-01-15T09:00, sal=9000.00, comm=500.00, deptno=10, isDeleted=false)]
+2026-01-02T12:54:01.719+08:00  INFO 109208 --- [http-nio-8080-exec-2] o.billyz.hrmanagement.aspect.LogAspect   : 
+操作描述: 按员工编号或姓名查询员工信息
+URL: http://localhost:8080/employees
+HTTP方法: GET
+类方法: org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryByIdOrName
+参数: [7369, null]
+
+2026-01-02T12:54:01.724+08:00  INFO 109208 --- [http-nio-8080-exec-2] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [Employee(empno=7369, ename=马云云, status=在职, job=软件工程师, mgr=7839, hiredate=2024-01-15T09:00, sal=9000.00, comm=500.00, deptno=10, isDeleted=false)]
+2026-01-02T12:54:01.768+08:00  INFO 109208 --- [http-nio-8080-exec-4] o.billyz.hrmanagement.aspect.LogAspect   : 
+操作描述: 按员工编号或姓名查询员工信息
+URL: http://localhost:8080/employees
+HTTP方法: GET
+类方法: org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryByIdOrName
+参数: [null, 张]
+
+2026-01-02T12:54:01.770+08:00  INFO 109208 --- [http-nio-8080-exec-4] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [Employee(empno=7698, ename=张一鸣, status=在职, job=经理, mgr=7839, hiredate=1981-05-01T00:00, sal=2850.00, comm=null, deptno=30, isDeleted=false), Employee(empno=7934, ename=张小龙, status=在职, job=职员, mgr=7782, hiredate=1982-01-23T00:00, sal=1300.00, comm=null, deptno=10, isDeleted=false)]
+2026-01-02T12:54:01.889+08:00  INFO 109208 --- [http-nio-8080-exec-5] o.billyz.hrmanagement.aspect.LogAspect   : 
+操作描述: 更新员工信息
+URL: http://localhost:8080/employees
+HTTP方法: PUT
+类方法: org.billyz.hrmanagement.service.Impl.EmpServiceImpl.updateEmp
+参数: [Employee(empno=7369, ename=马云云, status=null, job=null, mgr=null, hiredate=null, sal=null, comm=null, deptno=null, isDeleted=null)]
+
+2026-01-02T12:54:01.893+08:00  INFO 109208 --- [http-nio-8080-exec-5] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : 1
+2026-01-02T12:54:01.935+08:00  INFO 109208 --- [http-nio-8080-exec-3] o.billyz.hrmanagement.aspect.LogAspect   : 
+操作描述: 
+URL: http://localhost:8080/employees/details
+HTTP方法: GET
+类方法: org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeeDetailsPage
+参数: [1, 5]
+
+2026-01-02T12:54:01.993+08:00  INFO 109208 --- [http-nio-8080-exec-3] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : com.baomidou.mybatisplus.extension.plugins.pagination.Page@4b5b300c
+2026-01-02T12:54:02.040+08:00  INFO 109208 --- [http-nio-8080-exec-6] o.billyz.hrmanagement.aspect.LogAspect   : 
+操作描述: 按部门查询员工信息
+URL: http://localhost:8080/employees/by-dept
+HTTP方法: GET
+类方法: org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeesByDeptno
+参数: [10]
+
+2026-01-02T12:54:02.043+08:00  INFO 109208 --- [http-nio-8080-exec-6] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [EmployeeByDeptVO(empno=7369, ename=马云云, job=软件工程师, hiredate=2024-01-15T09:00, phone=13800007369, email=mayun@company.com, managerName=任正非), EmployeeByDeptVO(empno=7782, ename=王兴, job=经理, hiredate=1981-06-09T00:00, phone=13800007782, email=wangxing@company.com, managerName=任正非), EmployeeByDeptVO(empno=7839, ename=任正非, job=总裁, hiredate=1981-11-17T00:00, phone=13800007839, email=renzhengfei@company.com, managerName=null), EmployeeByDeptVO(empno=7934, ename=张小龙, job=职员, hiredate=1982-01-23T00:00, phone=13800007934, email=zhangxiaolong@company.com, managerName=王兴), EmployeeByDeptVO(empno=8004, ename=董明珠, job=培训师, hiredate=2020-11-11T00:00, phone=13800008004, email=dongmingzhu@company.com, managerName=null), EmployeeByDeptVO(empno=8010, ename=韦六, job=职员, hiredate=2020-05-15T00:00, phone=13800008010, email=weiliu@company.com, managerName=王兴)]
+2026-01-02T12:54:02.093+08:00  INFO 109208 --- [http-nio-8080-exec-9] o.billyz.hrmanagement.aspect.LogAspect   : 
+操作描述: 按部门查询员工信息
+URL: http://localhost:8080/employees/by-dept
+HTTP方法: GET
+类方法: org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeesByDeptno
+参数: [20]
+
+2026-01-02T12:54:02.095+08:00  INFO 109208 --- [http-nio-8080-exec-9] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [EmployeeByDeptVO(empno=7566, ename=雷军, job=经理, hiredate=1981-04-02T00:00, phone=13800007566, email=leijun@company.com, managerName=任正非), EmployeeByDeptVO(empno=7788, ename=刘强东, job=分析师, hiredate=1987-04-19T00:00, phone=13800007788, email=liuqiangdong@company.com, managerName=雷军), EmployeeByDeptVO(empno=7876, ename=程维, job=职员, hiredate=1987-05-23T00:00, phone=13800007876, email=chengwei@company.com, managerName=刘强东), EmployeeByDeptVO(empno=7902, ename=周鸿祎, job=分析师, hiredate=1981-12-03T00:00, phone=13800007902, email=zhouhongyi@company.com, managerName=雷军), EmployeeByDeptVO(empno=8008, ename=章四, job=实习生, hiredate=2024-03-01T00:00, phone=13800008008, email=zhangsi@company.com, managerName=null)]
+2026-01-02T12:54:02.156+08:00  INFO 109208 --- [http-nio-8080-exec-10] o.billyz.hrmanagement.aspect.LogAspect   : 
+操作描述: 按部门查询员工信息
+URL: http://localhost:8080/employees/by-dept
+HTTP方法: GET
+类方法: org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeesByDeptno
+参数: [30]
+
+2026-01-02T12:54:02.158+08:00  INFO 109208 --- [http-nio-8080-exec-10] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : [EmployeeByDeptVO(empno=7499, ename=马化腾, job=销售员, hiredate=1981-02-20T00:00, phone=13800007499, email=mahuateng@company.com, managerName=张一鸣), EmployeeByDeptVO(empno=7521, ename=李彦宏, job=销售员, hiredate=1981-02-22T00:00, phone=13800007521, email=liyanhong@company.com, managerName=张一鸣), EmployeeByDeptVO(empno=7654, ename=丁磊, job=销售员, hiredate=1981-09-28T00:00, phone=13800007654, email=dinglei@company.com, managerName=张一鸣), EmployeeByDeptVO(empno=7698, ename=张一鸣, job=经理, hiredate=1981-05-01T00:00, phone=13800007698, email=zhangyiming@company.com, managerName=任正非), EmployeeByDeptVO(empno=7844, ename=黄峥, job=销售员, hiredate=1981-09-08T00:00, phone=13800007844, email=huangzheng@company.com, managerName=张一鸣), EmployeeByDeptVO(empno=7900, ename=沈南鹏, job=职员, hiredate=1981-12-03T00:00, phone=13800007900, email=shennanpeng@company.com, managerName=张一鸣)]
+2026-01-02T13:40:44.847+08:00  INFO 97756 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 97756 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T13:40:44.849+08:00  INFO 97756 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T13:40:46.668+08:00  INFO 97756 --- [main] org.billyz.hrmanagement.HrApp            : Started HrApp in 2.089 seconds (process running for 2.407)
+2026-01-02T13:41:41.405+08:00  INFO 101788 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 101788 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T13:41:41.406+08:00  INFO 101788 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T13:41:42.783+08:00  WARN 101788 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'empController' method 
+org.billyz.hrmanagement.controller.EmpController#deleteEmp(Integer)
+to {DELETE [/employees]}: There is already 'empController' bean method
+org.billyz.hrmanagement.controller.EmpController#deleteEmployeesByIds(Integer) mapped.
+2026-01-02T13:41:42.805+08:00 ERROR 101788 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'empController' method 
+org.billyz.hrmanagement.controller.EmpController#deleteEmp(Integer)
+to {DELETE [/employees]}: There is already 'empController' bean method
+org.billyz.hrmanagement.controller.EmpController#deleteEmployeesByIds(Integer) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:990) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.billyz.hrmanagement.HrApp.main(HrApp.java:14) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'empController' method 
+org.billyz.hrmanagement.controller.EmpController#deleteEmp(Integer)
+to {DELETE [/employees]}: There is already 'empController' bean method
+org.billyz.hrmanagement.controller.EmpController#deleteEmployeesByIds(Integer) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:676) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:507) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:84) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:237) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.12.jar:6.2.12]
+	... 18 common frames omitted
+
+2026-01-02T13:42:28.449+08:00  INFO 106340 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 106340 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T13:42:28.450+08:00  INFO 106340 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T13:42:30.009+08:00  WARN 106340 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'empController' method 
+org.billyz.hrmanagement.controller.EmpController#deleteEmp(Integer)
+to {DELETE [/employees]}: There is already 'empController' bean method
+org.billyz.hrmanagement.controller.EmpController#deleteEmployeesByIds(Integer) mapped.
+2026-01-02T13:42:30.068+08:00 ERROR 106340 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'empController' method 
+org.billyz.hrmanagement.controller.EmpController#deleteEmp(Integer)
+to {DELETE [/employees]}: There is already 'empController' bean method
+org.billyz.hrmanagement.controller.EmpController#deleteEmployeesByIds(Integer) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:990) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.billyz.hrmanagement.HrApp.main(HrApp.java:14) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'empController' method 
+org.billyz.hrmanagement.controller.EmpController#deleteEmp(Integer)
+to {DELETE [/employees]}: There is already 'empController' bean method
+org.billyz.hrmanagement.controller.EmpController#deleteEmployeesByIds(Integer) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:676) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:507) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:84) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:237) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.12.jar:6.2.12]
+	... 18 common frames omitted
+
+2026-01-02T13:44:22.208+08:00  INFO 114800 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 114800 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T13:44:22.209+08:00  INFO 114800 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T13:44:23.415+08:00  WARN 114800 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'empController' method 
+org.billyz.hrmanagement.controller.EmpController#deleteEmployeesByIds(Integer)
+to {DELETE [/employees]}: There is already 'empController' bean method
+org.billyz.hrmanagement.controller.EmpController#deleteEmp(Integer) mapped.
+2026-01-02T13:44:23.438+08:00 ERROR 114800 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'empController' method 
+org.billyz.hrmanagement.controller.EmpController#deleteEmployeesByIds(Integer)
+to {DELETE [/employees]}: There is already 'empController' bean method
+org.billyz.hrmanagement.controller.EmpController#deleteEmp(Integer) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:990) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.billyz.hrmanagement.HrApp.main(HrApp.java:14) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'empController' method 
+org.billyz.hrmanagement.controller.EmpController#deleteEmployeesByIds(Integer)
+to {DELETE [/employees]}: There is already 'empController' bean method
+org.billyz.hrmanagement.controller.EmpController#deleteEmp(Integer) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:676) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:507) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:84) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:237) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.12.jar:6.2.12]
+	... 18 common frames omitted
+
+2026-01-02T13:45:39.126+08:00  INFO 113764 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 113764 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T13:45:39.127+08:00  INFO 113764 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T13:45:40.928+08:00  INFO 113764 --- [main] org.billyz.hrmanagement.HrApp            : Started HrApp in 2.082 seconds (process running for 2.402)
+2026-01-02T13:46:36.889+08:00  INFO 90716 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 90716 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T13:46:36.891+08:00  INFO 90716 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T13:46:38.485+08:00  INFO 90716 --- [main] org.billyz.hrmanagement.HrApp            : Started HrApp in 1.88 seconds (process running for 2.206)
+2026-01-02T13:49:42.366+08:00  INFO 103248 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 103248 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T13:49:42.368+08:00  INFO 103248 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T13:49:43.853+08:00  INFO 103248 --- [main] org.billyz.hrmanagement.HrApp            : Started HrApp in 1.784 seconds (process running for 2.107)
+2026-01-02T13:49:46.335+08:00  INFO 103248 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : 
+操作描述: 删除员工
+URL: http://localhost:8080/employees
+HTTP方法: DELETE
+类方法: org.billyz.hrmanagement.service.Impl.EmpServiceImpl.deleteEmp
+参数: [7369]
+
+2026-01-02T13:49:46.476+08:00  INFO 103248 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : 0
+2026-01-02T13:50:04.285+08:00  INFO 103248 --- [http-nio-8080-exec-6] o.billyz.hrmanagement.aspect.LogAspect   : 
+操作描述: 删除员工
+URL: http://localhost:8080/employees
+HTTP方法: DELETE
+类方法: org.billyz.hrmanagement.service.Impl.EmpServiceImpl.deleteEmp
+参数: [8010]
+
+2026-01-02T13:50:04.292+08:00  INFO 103248 --- [http-nio-8080-exec-6] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : 1
+2026-01-02T14:37:21.099+08:00  INFO 122956 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 122956 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T14:37:21.100+08:00  INFO 122956 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T14:37:23.697+08:00  INFO 122956 --- [main] org.billyz.hrmanagement.HrApp            : Started HrApp in 3.173 seconds (process running for 3.843)
+2026-01-02T14:37:26.109+08:00  INFO 122956 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : 
+操作描述: 删除部门
+URL: http://localhost:8080/department/30
+HTTP方法: DELETE
+类方法: org.billyz.hrmanagement.controller.DeptController.deleteDepartment
+参数: [30]
+
+2026-01-02T14:37:26.517+08:00  INFO 122956 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : ApiResponse(success=false, message=删除成功，6名员工已转为待入职状态, data=null)
+2026-01-02T15:21:27.289+08:00  INFO 134692 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 134692 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T15:21:27.292+08:00  INFO 134692 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T15:21:29.912+08:00  INFO 134692 --- [main] org.billyz.hrmanagement.HrApp            : Started HrApp in 3.243 seconds (process running for 3.861)
+2026-01-02T15:21:39.308+08:00  INFO 134692 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : 
+操作描述: 
+URL: http://localhost:8080/employees/details
+HTTP方法: GET
+类方法: org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeeDetailsPage
+参数: [1, 5]
+
+2026-01-02T15:21:39.706+08:00  INFO 134692 --- [http-nio-8080-exec-1] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : com.baomidou.mybatisplus.extension.plugins.pagination.Page@85b8245
+2026-01-02T15:22:00.130+08:00  INFO 134692 --- [http-nio-8080-exec-3] o.billyz.hrmanagement.aspect.LogAspect   : 
+操作描述: 
+URL: http://localhost:8080/employees/details
+HTTP方法: GET
+类方法: org.billyz.hrmanagement.service.Impl.EmpServiceImpl.queryEmployeeDetailsPage
+参数: [1, 3]
+
+2026-01-02T15:22:00.143+08:00  INFO 134692 --- [http-nio-8080-exec-3] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : com.baomidou.mybatisplus.extension.plugins.pagination.Page@62a66b6
+2026-01-02T15:58:58.627+08:00  INFO 142088 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 142088 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T15:58:58.630+08:00  INFO 142088 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T15:59:01.257+08:00  INFO 142088 --- [main] org.billyz.hrmanagement.HrApp            : Started HrApp in 3.209 seconds (process running for 3.834)
+2026-01-02T16:00:12.182+08:00  INFO 142088 --- [http-nio-8080-exec-4] o.billyz.hrmanagement.aspect.LogAspect   : 
+操作描述: 更新员工信息
+URL: http://localhost:8080/employees
+HTTP方法: PUT
+类方法: org.billyz.hrmanagement.service.Impl.EmpServiceImpl.updateEmp
+参数: [Employee(empno=2, ename=null, status=在职, job=null, mgr=null, hiredate=null, sal=null, comm=null, deptno=30, isDeleted=null)]
+
+2026-01-02T16:00:12.213+08:00  INFO 142088 --- [http-nio-8080-exec-4] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : 1
+2026-01-02T16:00:18.261+08:00  INFO 142088 --- [http-nio-8080-exec-5] o.billyz.hrmanagement.aspect.LogAspect   : 
+操作描述: 更新员工信息
+URL: http://localhost:8080/employees
+HTTP方法: PUT
+类方法: org.billyz.hrmanagement.service.Impl.EmpServiceImpl.updateEmp
+参数: [Employee(empno=1, ename=null, status=在职, job=null, mgr=null, hiredate=null, sal=null, comm=null, deptno=30, isDeleted=null)]
+
+2026-01-02T16:00:18.264+08:00  INFO 142088 --- [http-nio-8080-exec-5] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : 1
+2026-01-02T16:03:28.895+08:00  INFO 149436 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 21.0.9 with PID 149436 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T16:03:28.911+08:00  INFO 149436 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T16:03:36.610+08:00  INFO 149436 --- [main] org.billyz.hrmanagement.HrApp            : Started HrApp in 9.026 seconds (process running for 9.816)
+2026-01-02T22:38:55.190+08:00  INFO 160568 --- [main] org.billyz.hrmanagement.HrApp            : Starting HrApp using Java 17.0.14 with PID 160568 (D:\Springboot\1216\hr-management\target\classes started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T22:38:55.192+08:00  INFO 160568 --- [main] org.billyz.hrmanagement.HrApp            : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T22:38:57.703+08:00  INFO 160568 --- [main] org.billyz.hrmanagement.HrApp            : Started HrApp in 2.962 seconds (process running for 3.526)
+2026-01-02T22:39:50.263+08:00  INFO 153268 --- [main] o.b.h.controller.DeptControllerTest      : Starting DeptControllerTest using Java 17.0.14 with PID 153268 (started by 35607 in D:\Springboot\1216\hr-management)
+2026-01-02T22:39:50.264+08:00  INFO 153268 --- [main] o.b.h.controller.DeptControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T22:39:52.510+08:00  INFO 153268 --- [main] o.b.h.controller.DeptControllerTest      : Started DeptControllerTest in 2.61 seconds (process running for 3.638)
+2026-01-02T22:39:53.673+08:00  INFO 153268 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 
+操作描述: 删除部门
+URL: http://localhost/department/10
+HTTP方法: DELETE
+类方法: org.billyz.hrmanagement.controller.DeptController.deleteDepartment
+参数: [10]
+
+2026-01-02T22:39:53.676+08:00  INFO 153268 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 
+操作描述: 删除部门
+URL: http://localhost/department/10
+HTTP方法: DELETE
+类方法: org.billyz.hrmanagement.service.Impl.DeptServiceImpl.deleteDepartment
+参数: [10]
+
+2026-01-02T22:39:53.790+08:00  INFO 153268 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : 删除成功，4名员工已转为待入职状态
+2026-01-02T22:39:53.790+08:00  INFO 153268 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : ApiResponse(success=true, message=Success, data=删除成功，4名员工已转为待入职状态)
+2026-01-02T22:39:53.815+08:00  INFO 153268 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 
+操作描述: 删除部门
+URL: http://localhost/department/99999
+HTTP方法: DELETE
+类方法: org.billyz.hrmanagement.controller.DeptController.deleteDepartment
+参数: [99999]
+
+2026-01-02T22:39:53.816+08:00  INFO 153268 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 
+操作描述: 删除部门
+URL: http://localhost/department/99999
+HTTP方法: DELETE
+类方法: org.billyz.hrmanagement.service.Impl.DeptServiceImpl.deleteDepartment
+参数: [99999]
+
+2026-01-02T22:39:53.817+08:00  INFO 153268 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : 部门不存在
+2026-01-02T22:39:53.817+08:00  INFO 153268 --- [main] o.billyz.hrmanagement.aspect.LogAspect   : 返回结果 : ApiResponse(success=false, message=部门不存在, data=null)

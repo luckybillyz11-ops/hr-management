@@ -1,8 +1,13 @@
 -- 删除现有表（如果存在）
-DROP TABLE IF EXISTS bonus;
-DROP TABLE IF EXISTS emp;
-DROP TABLE IF EXISTS dept;
-DROP TABLE IF EXISTS salgrade;
+-- 使用 CASCADE 级联删除依赖对象
+DROP TABLE IF EXISTS bonus CASCADE;
+DROP TABLE IF EXISTS employee_profile CASCADE;
+DROP TABLE IF EXISTS emp CASCADE;
+DROP TABLE IF EXISTS dept CASCADE;
+DROP TABLE IF EXISTS salgrade CASCADE;
+
+-- 删除枚举类型（如果存在）
+DROP TYPE IF EXISTS emp_status CASCADE;
 
 -- 创建部门表
 CREATE TABLE dept (
@@ -34,8 +39,8 @@ CREATE TABLE emp (
      hiredate TIMESTAMP,
      sal      DECIMAL(7,2),
      comm     DECIMAL(7,2),
-     deptno   INTEGER
-
+     deptno   INTEGER,
+     is_deleted BOOLEAN DEFAULT false  -- 逻辑删除标记
 );
 
 -- 插入员工数据

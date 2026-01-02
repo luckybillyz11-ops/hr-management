@@ -1,19 +1,14 @@
 package org.billyz.hrmanagement.service;
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import org.billyz.hrmanagement.entity.Department;
 
-import java.util.List;
+public interface DeptService extends IService<Department> {
 
-public interface DeptService {
-
-    List<Department> getAllDepts();
-
-    Department getDeptById(Integer deptno);
-
-    Department getDeptByName(String dname);
-
-    int deleteDeptById(Integer deptno);
-
-    Department addDept(Department dept);
-
+    /**
+     * 删除部门
+     * @param deptno 部门编号
+     * @return 删除结果消息
+     */
+    String deleteDepartment(Integer deptno);
 }
