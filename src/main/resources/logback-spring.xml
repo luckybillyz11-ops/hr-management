@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- 控制台输出 -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 每小时滚动的文件输出 -->
+    <appender name="FILE_HOURLY" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/hr-app.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 每小时生成一个日志文件，格式为 hr-app.yyyy-MM-dd-HH.log -->
+            <fileNamePattern>logs/hr-app.%d{yyyy-MM-dd-HH}.log</fileNamePattern>
+            <!-- 保留30天的日志文件 -->
+            <maxHistory>720</maxHistory>
+            <!-- 总日志大小限制为10GB -->
+            <totalSizeCap>10GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 设置包的日志级别和输出 -->
+    <logger name="org.billyz.hrmanagement" level="INFO" additivity="false">
+        <appender-ref ref="FILE_HOURLY"/>
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+
+    <root level="WARN">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE_HOURLY"/>
+    </root>
+</configuration>

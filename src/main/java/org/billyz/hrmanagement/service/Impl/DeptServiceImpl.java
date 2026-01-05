@@ -33,7 +33,8 @@ public class DeptServiceImpl extends ServiceImpl<DepartmentDao, Department> impl
         
         // 先查询员工数量（用于返回提示信息）
         Long employeeCount = employeeDao.selectCount(queryWrapper);
-        
+
+
         // 批量更新：一次SQL更新所有员工的部门
         if (employeeCount > 0) {
             Employee updateEmployee = new Employee();

@@ -19,3 +19,5 @@ logging:
     root: warn
     org.billyz.hrmanagement : info
     org.billyz.hrmanagement.aspect: debug
+    org.springframework.jdbc.datasource.DataSourceTransactionManager: DEBUG
+
